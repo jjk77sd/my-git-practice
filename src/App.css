@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+.header {
+  height: 70px;
+  background: #1e293b;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+}
+
+.header h2 {
+  color: #38bdf8;
+}
+
+.profile {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.layout {
+  display: flex;
+  min-height: calc(100vh - 120px);
+}
+
+.sidebar {
+  width: 240px;
+  background: white;
+  padding: 25px 15px;
+}
+
+.sidebar h3 {
+  margin-bottom: 20px;
+  color: #64748b;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  padding: 15px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sidebar li:hover,
+.sidebar li.active {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.content {
+  flex: 1;
+  padding: 35px;
+  min-width: 0;
+}
+
+.content h1 {
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #64748b;
+  margin-bottom: 30px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card {
+  padding: 25px;
+  border-radius: 12px;
+  color: white;
+  box-shadow: 0 4px 10px #00000010;
+}
+
+.card h3 {
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.card h1 {
+  font-size: 30px;
+}
+
+.card p {
+  margin-top: 12px;
+  font-size: 13px;
+}
+
+.blue {
+  background: #3b82f6;
+}
+
+.green {
+  background: #10b981;
+}
+
+.orange {
+  background: #f59e0b;
+}
+
+.purple {
+  background: #8b5cf6;
+}
+
+.welcome {
+  background: white;
+  padding: 30px;
+  margin-top: 30px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px #00000008;
+}
+
+.welcome h2 {
+  margin-bottom: 15px;
+}
+
+.footer {
+  background: #1e293b;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+@media (max-width: 1000px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .content {
+    padding: 20px;
+  }
+}
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  max-width: none;
+  width: 100%;
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Bỏ giới hạn chiều rộng của các khu vực */
+.header,
+.navbar,
+.layout,
+.footer {
+  width: 100%;
+  max-width: none;
+}
